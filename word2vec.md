@@ -1,12 +1,13 @@
-#Word2Vect
-##How to represent words?
+# Word2Vect
+
+## How to represent words?
 * navie representation: one-hot vectors in $R^{\mid vocabulary \mid}$(very large).
 * Classical IR: document and query vector are superpositions of word vectors: $$\hat{d_q}=\arg\max_d sim(d,q)$$ simily for word classification problems
 * We want richer representations expressing senmantic similarity
 * Idea: produce dense vector representation based on the context/use of words.
 * Three main approches: **count-based**, **predictive**, and **task-based**.
 
-##Count-based methods
+## Count-based methods
 * Define a **biasis vocabulary** $C$ of content words.
 * Define a **word window** size $W$.
 * **Count the basis vocabulary** occurring w words to the left or right of each instance of a **target word** in the corpus. From a **vector representation** of the target word based on these counts.  
@@ -28,7 +29,7 @@
 * **Not all features are equel**: we must distinguish counts that are high because they are informative from those that are just ***independently frequent contexts***
 * Some **normalisation methods**: **TF-IDF**, **PMI**
 
-##Nerual Embedding Models
+## Nerual Embedding Models
 * **count based vectors** 产生了一个 **embedding matrix in $R^{|vocab|\times|context|}$**$$
 \begin{array}{c|lcr}
 n & \text{bit} & \text{cute} & \text{furry} & \cdots\\
@@ -72,7 +73,7 @@ $$
 	* Just read off probalities from softmax.
 	* Trade off between efficiency and more structed notion of context.
 	
-##参考文献
+## 参考文献
 1. [oxford-cs-deepnlp-2017 Word Level Semantics](https://github.com/oxford-cs-deepnlp-2017/lectures/blob/master/Lecture%202a-%20Word%20Level%20Semantics.pdf)
 2. [skip-gram model](http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/)
 3. [egative sampling](http://mccormickml.com/2017/01/11/word2vec-tutorial-part-2-negative-sampling/)
