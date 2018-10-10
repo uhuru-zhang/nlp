@@ -32,12 +32,12 @@
 ## Nerual Embedding Models
 * **count based vectors** 产生了一个 **embedding matrix in $R^{|vocab|\times|context|}$**$$
 \begin{array}{c|lcr}
-n & \text{bit} & \text{cute} & \text{furry} & \cdots\\
-\hline
-kitten & 0 & 1 & 0 & \cdots\\
-cat & 0 & 0 & 1 & \cdots\\
-dog & 1 & 1 & 0 & \cdots\\
-\vdots & \vdots & \vdots & \vdots & \ddots
+n & \text{bit} & \text{cute} & \text{furry} & \cdots \\
+\hline 
+kitten & 0 & 1 & 0 & \cdots \\
+cat & 0 & 0 & 1 & \cdots \\
+dog & 1 & 1 & 0 & \cdots \\
+\vdots & \vdots & \vdots & \vdots & \ddots \\
 \end{array}
 $$
 	所以 cat 我们就可以表示为$$
@@ -59,7 +59,8 @@ $$
 	4. Produces a loss that is differentiable w.r.t $\boldsymbol{\theta},\boldsymbol{E}$.
 
 * **Neraul Embedding Models: C&W**
-	![Alt Text](https://github.com/zhangsiqi951016/nlp/tree/master/img/word2vec/C&W.png 'model C&W')
+	![Alt Text](./img/word2vec/C&W.png 'model C&W')
+	$$模型 C\&W$$
 	* Prevents the network from **ingoring input and outputting high score**. During traing, for each sentence s we sample a distrctor sentnce z by randomly corruptting words of s. Minimise hinge loss.$$\boldsymbol{L}=\max(0, 1-(g_{\boldsymbol{\theta},\boldsymbol{E}}(s) - g_{\boldsymbol{\theta},\boldsymbol{E}}(z)))$$ 
 	* representations carry information about what **neighbouring representations** should look like.**But**,it is not cheap to train, because it is fairy **deep**, and **convolution capture very local information**.
 
