@@ -33,7 +33,7 @@
 * **count based vectors** 产生了一个 **embedding matrix in $R^{|vocab|\times|context|}$**$$
 \begin{array}{c|lcr}
 n & \text{bit} & \text{cute} & \text{furry} & \cdots \\
-\hline 
+\hline
 kitten & 0 & 1 & 0 & \cdots \\
 cat & 0 & 0 & 1 & \cdots \\
 dog & 1 & 1 & 0 & \cdots \\
