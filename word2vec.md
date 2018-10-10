@@ -59,8 +59,7 @@ $$
 	4. Produces a loss that is differentiable w.r.t $\boldsymbol{\theta},\boldsymbol{E}$.
 
 * **Neraul Embedding Models: C&W**
-	![Alt Text](./img/word2vec/C&W.png 'model C&W')
-	$$模型C&W$$
+	![Alt Text](https://github.com/zhangsiqi951016/nlp/tree/master/img/word2vec/C&W.png 'model C&W')
 	* Prevents the network from **ingoring input and outputting high score**. During traing, for each sentence s we sample a distrctor sentnce z by randomly corruptting words of s. Minimise hinge loss.$$\boldsymbol{L}=\max(0, 1-(g_{\boldsymbol{\theta},\boldsymbol{E}}(s) - g_{\boldsymbol{\theta},\boldsymbol{E}}(z)))$$ 
 	* representations carry information about what **neighbouring representations** should look like.**But**,it is not cheap to train, because it is fairy **deep**, and **convolution capture very local information**.
 
